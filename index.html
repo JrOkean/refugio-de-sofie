@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Refúgio de Sofie — Sim, Aceitei Por Impulso</title>
+<style>
+  body {
+    background: #1b1b1b;
+    color: #f4f4f4;
+    font-family: 'Arial Black', Arial, sans-serif;
+    text-align: center;
+    padding: 30px;
+  }
+  h1 {
+    color: #ff4d6d;
+    font-size: 3em;
+    margin-bottom: 0.2em;
+  }
+  p {
+    font-size: 1.2em;
+    margin: 15px auto;
+    max-width: 700px;
+  }
+  .gif-container {
+    margin: 20px 0;
+  }
+  .warning {
+    background: #ff4d6d;
+    color: #1b1b1b;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 650px;
+    margin: 25px auto;
+  }
+  button {
+    background: #ff4d6d;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 25px;
+  }
+  button:hover {
+    background: #e03e5a;
+  }
+  .game {
+    margin-top: 30px;
+  }
+  .result {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #ffe8eb;
+  }
+  a.download-link {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 30px;
+    background: #ff4d6d;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+  }
+  a.download-link:hover {
+    background: #e03e5a;
+  }
+</style>
+</head>
+<body>
+
+<h1>⚠️ Refúgio de Sofie ⚠️</h1>
+
+<div class="gif-container">
+  <img src="https://i.imgur.com/UbBqIvW.gif" alt="Caleb tirando óculos - Não toque no que não é seu" width="320"/>
+</div>
+
+<p><strong>“Não toque no que não é seu... ou vai acabar num porão na fronteira fingindo que sabe dançar salsa.”</strong></p>
+
+<div class="warning">
+  📌 <em>Copiar esta história não te faz criador.<br>
+  Te faz vilão de segunda categoria em fuga da própria mediocridade.</em><br><br>
+  💥 Sofie não divide seu caos.<br>
+  E a Interpol não divide a cela.<br><br>
+  📎 Crie sua própria confusão, ou viva pra sempre como figurante do livro dos outros.<br><br>
+  🎯 <strong>Página protegida por Alianças de Impulso e Sutiãs com Chip de Rastreamento.</strong>
+</div>
+
+<div class="game">
+  <h2>🎮 Mini Jogo: Fuja com a Sofie</h2>
+  <p>Escolha uma ação para escapar da confusão!</p>
+  <button onclick="playGame('armario')">Esconder no armário do escritório</button>
+  <button onclick="playGame('guindaste')">Escalar um guindaste usando salto</button>
+  <button onclick="playGame('britanico')">Dizer “sou inocente” com sotaque britânico</button>
+  <p class="result" id="gameResult"></p>
+</div>
+
+<a href="https://www.simaceiteiporimpulso.com/manual_sobrevivencia.pdf" class="download-link" target="_blank" rel="noopener noreferrer">📥 Baixe o Manual de Sobrevivência para Esposas de Agentes Duplos</a>
+
+<p style="margin-top: 40px; font-style: italic;">
+  “Se você chegou até aqui sem ser preso, sem cair num helicóptero, e sem aceitar outro casamento por impulso... parabéns.<br>
+  Você é mais responsável do que eu.<br>
+  Mas… onde está a graça nisso?”
+</p>
+
+<script>
+  function playGame(choice) {
+    const results = {
+      armario: "Você escapou! Mas perdeu o buquê e agora o helicóptero te chama de madame.",
+      guindaste: "Você foi presa, mas conheceu um cara gostoso na cadeia. Talvez valha a pena.",
+      britanico: "Você explodiu a copiadora. Lilian tá orgulhosa."
+    };
+    document.getElementById("gameResult").textContent = results[choice];
+  }
+</script>
+
+</body>
+</html>
