@@ -20,7 +20,7 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Build and deploy
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v4
         with:
           path: .  # Se o HTML está na raiz do repo
 
