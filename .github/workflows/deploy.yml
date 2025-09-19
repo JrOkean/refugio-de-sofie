@@ -22,7 +22,7 @@ jobs:
       - name: Build and deploy
         uses: actions/upload-pages-artifact@v4
         with:
-          path: .  # Se o HTML está na raiz do repo
+          path: ./  # Se o HTML está na raiz do repo
 
       - name: Deploy to GitHub Pages
         id: deployment
