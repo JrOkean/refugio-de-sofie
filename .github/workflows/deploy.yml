@@ -1,18 +1,29 @@
 name: Deploy to GitHub Pages
-
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main  # ou a branch que você usa como principal
+
+permissions:
+  contents: write    # Permite o workflow criar/atualizar branch gh-pages
+  pages: write       # Permite publicar no GitHub Pages
 
 jobs:
   deploy:
-    runs-on: windows-latest
-    
+    runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v3
-    
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./  # ou ./dist se você tem uma pasta de build
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Build and deploy
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: .  # Se o HTML está na raiz do repo
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v3
