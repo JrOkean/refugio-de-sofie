@@ -7,6 +7,7 @@ on:
 permissions:
   contents: write    # Permite o workflow criar/atualizar branch gh-pages
   pages: write       # Permite publicar no GitHub Pages
+  id-token: write    # Permissão necessária para OIDC e deploy
 
 jobs:
   deploy:
